@@ -12,10 +12,13 @@ const ContactForm = () => {
 
   return (
     <div className="App">
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <h1>My Contact Form</h1>
+      <form data-testid="form" onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label htmlFor="firstName">First Name*</label>
           <input
+          id="firstName"
+          type="text"
             name="firstName"
             placeholder="Edd"
             ref={register({ required: true, maxLength: 3 })}
@@ -28,6 +31,7 @@ const ContactForm = () => {
         <div>
           <label htmlFor="lastName">Last Name*</label>
           <input
+          id = "message"
             name="lastName"
             placeholder="Burke"
             ref={register({ required: true })}
